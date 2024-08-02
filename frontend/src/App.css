@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #00d5b9;  /* Teal */
+  --secondary-color: #ff887d; /* Coral */
+  --background-color: #f5f5f5; /* Light Gray */
+}
+
+/* Applying the colors to your elements */
+body {
+  background-color: var(--background-color);
+  color: #333; /* Dark Gray for text */
+  margin: 0;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}

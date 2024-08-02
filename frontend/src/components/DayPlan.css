@@ -1,0 +1,34 @@
+.day-plan {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.activity-box {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-box h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.activity-item {
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item:last-child {
+    margin-bottom: 0;
+}

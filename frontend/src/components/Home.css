@@ -1,0 +1,36 @@
+.home {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trip-plan-display {
+  margin-top: 20px;
+}
+
+.day-plan {
+  margin-bottom: 20px;
+}

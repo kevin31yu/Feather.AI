@@ -1,0 +1,63 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    position: sticky;
+    top: 0; /* Sticks to the top */
+    width: 100%; /* Full width */
+    height: 60px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #00d5b9; /* Primary color */
+    color: #fff; /* Text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    box-sizing: border-box; /* Ensures padding is included in height */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows brand to take up available space */
+}
+
+.navbar-icon {
+    height: 40px; /* Explicit height for the icon */
+    width: auto; /* Maintains aspect ratio */
+    margin-right: 1rem; /* Space between icon and title */
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    color: #fff; /* Text color for links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* src/components/SearchBar.css */
+
+.search-bar {
+    position: sticky;
+    top: 60px; /* Just below the navbar */
+    background-color: #fff; /* Background color for the search bar */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    z-index: 1000; /* Ensures it stays above other content */
+}
