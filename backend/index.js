@@ -7,7 +7,7 @@ import cors from 'cors';
 config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json()); // For parsing application/json
