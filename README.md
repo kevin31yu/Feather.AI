@@ -30,7 +30,7 @@ WanderPlan.AI is a travel planning application designed to help users create det
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/WanderPlan.AI.git
+git clone https://github.com/kevin31yu/WanderPlan.AI.git
 cd WanderPlan.AI
 ```
 
