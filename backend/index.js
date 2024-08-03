@@ -7,7 +7,7 @@ import cors from 'cors';
 config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || "http://wanderplanai.us-east-2.elasticbeanstalk.com" || 5000;
 
 // Middleware
 app.use(express.json()); // For parsing application/json

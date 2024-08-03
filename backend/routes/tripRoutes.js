@@ -6,4 +6,8 @@ const router = express.Router();
 // Define the route for generating a trip plan
 router.post('/trip', getTripPlan);
 
+router.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 export default router;

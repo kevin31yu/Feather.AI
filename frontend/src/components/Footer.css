@@ -1,0 +1,10 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #00d5b9; /* Match this to your theme color */
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 5px;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}

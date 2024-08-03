@@ -34,3 +34,11 @@ button {
 .day-plan {
   margin-bottom: 20px;
 }
+
+.loading {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 100px;
+  color: #ff887d;
+  border: solid 5px #ff887d;
+}
