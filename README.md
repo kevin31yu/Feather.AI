@@ -2,6 +2,12 @@
 
 WanderPlan.AI is a travel planning application designed to help users create detailed and personalized trip itineraries. It leverages OpenAI's API to generate travel plans based on user inputs, such as destination and number of days.
 
+## Live Demo
+
+You can view the live demo of the frontend at:
+
+[http://wanderplan-frontend.s3-website.us-east-2.amazonaws.com/](http://wanderplan-frontend.s3-website.us-east-2.amazonaws.com/)
+
 ## Features
 
 - **Personalized Trip Planning**: Generate customized trip itineraries based on user inputs.
