@@ -13,7 +13,7 @@ const SearchBar = ({ destination, days, setDestination, setDays, handleSubmit })
                             type="text"
                             value={destination}
                             onChange={(e) => setDestination(e.target.value)}
-                            placeholder="Enter your destination"
+                            placeholder="Ex: Tokyo"
                         />
                     </div>
                     <div className="input-group">
@@ -23,7 +23,7 @@ const SearchBar = ({ destination, days, setDestination, setDays, handleSubmit })
                             type="text"
                             value={days}
                             onChange={(e) => setDays(e.target.value)}
-                            placeholder="Number of days"
+                            placeholder="Ex: 3"
                         />
                     </div>
                     <button type="submit" className="button">Get Trip Plan</button>

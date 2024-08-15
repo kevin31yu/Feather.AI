@@ -19,8 +19,29 @@ body {
 .button {
   background-color: var(--secondary-color);
   color: white;
+  max-width: 120px;
 }
 
 .button:hover {
   background-color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.username {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: var(--secondary-color);
+  background-color: #ffdedb;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px; 
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap:20px;
+  flex-direction: column;
 }

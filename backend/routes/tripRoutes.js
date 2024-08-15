@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/trip', getTripPlan);
 
 router.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send('WanderPlan server running');
 });
 
 export default router;

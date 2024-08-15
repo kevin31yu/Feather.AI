@@ -7,11 +7,14 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <img src="/icon.png" alt="App Icon" className="navbar-icon" />
-                <h1 className="navbar-title">WanderPlan</h1>
+                <Link to="/">
+                    <img src="/icon.png" alt="App Icon" className="navbar-icon" />
+                </Link>
+                <Link to="/"><h1 className="navbar-title">WanderPlan</h1></Link>
             </div>
             <ul className="navbar-links">
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/signin">Sign In</Link></li>
+                <li><Link to="/signup">Sign Up</Link></li>
                 <li><a href="https://www.linkedin.com/in/kevin-32-yu/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </nav>
