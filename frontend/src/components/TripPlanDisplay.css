@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 100vh; /* Full viewport height */
+    height: 88vh; /* Full viewport height */
   overflow-y: auto; /* Enable vertical scrolling if needed */
 }

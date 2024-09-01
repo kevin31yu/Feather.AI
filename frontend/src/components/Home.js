@@ -2,50 +2,58 @@ import React, { useState } from 'react';
 import axiosInstance from '../axiosConfig';
 import SearchBar from './SearchBar';
 import TripPlanDisplay from './TripPlanDisplay';
+import MapComponent from './MapComponent';
 import './Home.css';
 
 const Home = ({ username }) => {
     const [destination, setDestination] = useState('');
     const [days, setDays] = useState('');
     const [tripPlan, setTripPlan] = useState([]);
-    const [loading, setLoading] = useState(false); // Add loading state
+    const [empty, setEmpty] = useState(true);
+    const [loading, setLoading] = useState(false);
+    const [coordinates, setCoordinates] = useState({ longitude: -73.935242, latitude: 40.730610 }); // Add state for coordinates
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Set loading to true when request starts
+        await setEmpty(false);
+        setLoading(true);
         try {
             const response = await axiosInstance.post('/api/trip', { destination, days });
             setTripPlan(response.data.tripPlan);
+            if (!response.data.coordinates) setCoordinates(response.data.coordinates); // Update coordinates state
         } catch (error) {
             console.error('Error fetching trip plan:', error);
+            setEmpty(true);
         } finally {
-            setLoading(false); // Set loading to false when request finishes
+            setLoading(false);
         }
     };
-
-
 
     return (
         <div className="home">
             {username && <div className="username">
                 <span>Welcome back, {username}!</span>
             </div>}
-            <SearchBar
-                destination={destination}
-                days={days}
-                setDestination={setDestination}
-                setDays={setDays}
-                handleSubmit={handleSubmit}
-            />
             <div className="container">
-            <div className="map">
-                <img src="/icon.png"></img>
-            </div>
-            {loading ? (
-                <div className="loading"><p>Got it, sounds like a plan...</p></div> // Display loading message
-            ) : (
-                <TripPlanDisplay tripPlan={tripPlan} />
-            )}
+                <div className="map">
+                    <SearchBar
+                        destination={destination}
+                        days={days}
+                        setDestination={setDestination}
+                        setDays={setDays}
+                        handleSubmit={handleSubmit}
+                    />
+                    <MapComponent
+                        longitude={coordinates.longitude}
+                        latitude={coordinates.latitude}
+                    />
+                </div>
+                {empty && <div className="loading"><p>Your trip begins here!</p></div>}
+                {loading ? (
+                    <div className="loading"><p>Got it, sounds like a plan...</p></div>
+                ) : (
+                    <TripPlanDisplay tripPlan={tripPlan} />
+                )}
             </div>
         </div>
     );

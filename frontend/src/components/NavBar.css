@@ -50,7 +50,7 @@
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
+    color: #ff887d;
 }
 
 /* src/components/SearchBar.css */

@@ -35,12 +35,13 @@ button {
 .loading {
   font-size: 1.5em;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 100px;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
   color: #ff887d;
   border: solid 5px #ff887d;
+  height: 100%; /* Ensure the div takes up the full viewport height if needed */
 }
+
 
 .container {
   display: grid;
@@ -51,10 +52,12 @@ button {
 }
 
 .map {
-  height: auto;
+  height: 100%;
+  position: sticky;
 }
 
-img {
-  width: 100%;
-  /* Cover the container area */
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column layout for screens less than 960px */
+  }
 }
