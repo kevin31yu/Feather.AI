@@ -20,15 +20,12 @@
 }
 
 button {
+  margin-top: 20px;
   padding: 10px 20px;
   border: none;
   color: white;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.trip-plan-display {
-  margin-top: 20px;
 }
 
 .day-plan {
@@ -37,8 +34,27 @@ button {
 
 .loading {
   font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 100px;
   color: #ff887d;
   border: solid 5px #ff887d;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Creates two equal-width columns */
+  gap: 20px;
+  /* Optional: adds space between the columns */
+}
+
+.map {
+  height: auto;
+}
+
+img {
+  width: 100%;
+  /* Cover the container area */
 }

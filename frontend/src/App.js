@@ -11,19 +11,11 @@ import './App.css';
 function App() {
     const [username, setUsername] = useState('');
 
-    const handleSignOut = () => {
-        setUsername('');
-    }
-
     return (
         <div className="app">
-            <NavBar /> {/* Include NavBar component */}
-            {username && <div className="username">
-                <span>Welcome back, {username}!</span>
-                <button onClick={handleSignOut} className="button">Sign Out</button>
-            </div>} {/* Display error message */}
+            <NavBar username={username} setUsername={setUsername} /> {/* Include NavBar component */}
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home username={username} />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signin" element={<SignIn setUsername={setUsername} />} />
                 {/* Add other routes here if needed */}

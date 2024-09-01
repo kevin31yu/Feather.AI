@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import TripPlanDisplay from './TripPlanDisplay';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ username }) => {
     const [destination, setDestination] = useState('');
     const [days, setDays] = useState('');
     const [tripPlan, setTripPlan] = useState([]);
@@ -23,8 +23,13 @@ const Home = () => {
         }
     };
 
+
+
     return (
         <div className="home">
+            {username && <div className="username">
+                <span>Welcome back, {username}!</span>
+            </div>}
             <SearchBar
                 destination={destination}
                 days={days}
@@ -32,11 +37,16 @@ const Home = () => {
                 setDays={setDays}
                 handleSubmit={handleSubmit}
             />
+            <div className="container">
+            <div className="map">
+                <img src="/icon.png"></img>
+            </div>
             {loading ? (
-                <div className="loading">Got it, sounds like a plan...</div> // Display loading message
+                <div className="loading"><p>Got it, sounds like a plan...</p></div> // Display loading message
             ) : (
                 <TripPlanDisplay tripPlan={tripPlan} />
             )}
+            </div>
         </div>
     );
 };
