@@ -20,7 +20,7 @@ const Home = ({ username }) => {
         try {
             const response = await axiosInstance.post('/api/trip', { destination, days });
             setTripPlan(response.data.tripPlan);
-            if (!response.data.coordinates) setCoordinates(response.data.coordinates); // Update coordinates state
+            setCoordinates(response.data.coordinates); // Update coordinates state
         } catch (error) {
             console.error('Error fetching trip plan:', error);
             setEmpty(true);
