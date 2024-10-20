@@ -48,12 +48,14 @@ const Home = ({ username }) => {
                         latitude={coordinates.latitude}
                     />
                 </div>
+                <div className="content">
                 {empty && <div className="loading"><p>Your trip begins here!</p></div>}
                 {loading ? (
                     <div className="loading"><p>Got it, sounds like a plan...</p></div>
                 ) : (
-                    <TripPlanDisplay tripPlan={tripPlan} />
+                    !empty && <TripPlanDisplay tripPlan={tripPlan} />
                 )}
+                </div>
             </div>
         </div>
     );

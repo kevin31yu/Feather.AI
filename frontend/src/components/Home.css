@@ -39,7 +39,7 @@ button {
   justify-content: center; /* Horizontally center */
   color: #ff887d;
   border: solid 5px #ff887d;
-  height: 100%; /* Ensure the div takes up the full viewport height if needed */
+  height: 99%; /* Ensure the div takes up the full viewport height if needed */
 }
 
 
@@ -49,6 +49,7 @@ button {
   /* Creates two equal-width columns */
   gap: 20px;
   /* Optional: adds space between the columns */
+  grid-template-rows: auto;
 }
 
 .map {
