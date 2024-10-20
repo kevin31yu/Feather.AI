@@ -19,7 +19,7 @@ You can view the live demo of the frontend at:
 
 - **Frontend**: React, Axios
 - **Backend**: Node.js, Express.js
-- **Database**: None (for this version)
+- **Database**: MongoDB Atlas
 - **Hosting**: AWS Elastic Beanstalk
 - **API**: OpenAI API
 
