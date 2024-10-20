@@ -6,7 +6,7 @@ WanderPlan.AI is a travel planning application designed to help users create det
 
 You can view the live demo of the frontend at:
 
-[http://wanderplan-frontend.s3-website.us-east-2.amazonaws.com/](http://wanderplan-frontend.s3-website.us-east-2.amazonaws.com/) (Inactivated)
+[http://wanderplan.s3-website.us-east-2.amazonaws.com](http://wanderplan.s3-website.us-east-2.amazonaws.com)
 
 ## Features
 
